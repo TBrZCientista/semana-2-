@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    
+    function desenhaQuadradinho(x,y,cor){
+    
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x,y,50,50);
+        pincel.fillStroke = "black";
+        pincel.strokeRect(x,y,50,50); 
+
+    }
+    
+    var quantidade = parseInt(prompt("Quantos quadrados você deseja? Só pode até 12!!!"));
+    
+    var contador = 1;
+    var x = 0;
+    
+    while(contador <= quantidade) {
+        if (quantidade <= 12){
+            
+            desenhaQuadradinho(x,0,"green");
+            x = x + 50;
+            contador++;
+        
+        }
+        else {
+            break;
+        }
+    }
+   
+   
+
+</script>
